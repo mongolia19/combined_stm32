@@ -1,0 +1,12 @@
+<html>
+<body>
+<pre>
+<h1>礦ision3 Build Log</h1>
+<h2>Project:</h2>
+F:\实验室项目\LED底板\FIRMWARE\2010-5-24\LED_DRIVER_STM32F107\Project\Template\RVMDK\Project.uv2
+Project File Date:  05/31/2010
+
+<h2>Output:</h2>
+Load "F:\\实验室项目\\LED底板\\FIRMWARE\\2010-5-24\\LED_DRIVER_STM32F107\\Project\\Template\\RVMDK\\Obj\\STM3210B-EVAL.AXF" 
+_____^
+*** error 56: cant open file

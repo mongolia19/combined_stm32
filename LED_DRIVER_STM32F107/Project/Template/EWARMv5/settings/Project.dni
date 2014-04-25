@@ -1,0 +1,61 @@
+[DebugChecksum]
+Checksum=1469701513
+[DisAssemblyWindow]
+NumStates=_ 1
+State 1=_ 0
+[InstructionProfiling]
+Enabled=_ 0
+[CodeCoverage]
+Enabled=_ 0
+[Profiling]
+Enabled=0
+[StackPlugin]
+Enabled=1
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnHow=0
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DriverProfiling]
+Enabled=0
+Source=2
+Graph=0
+[Aliases]
+Count=0
+SuppressDialog=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Disassemble mode]
+mode=1
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$}.202.3@1" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$}.221.5@1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{F:\实验室项目\LED底板\FIRMWARE\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.202.3@1" 0 0 0 0 "" 0 ""
+Bp3=_ "STD_CODE" "{E:\刘刚暂时文件夹\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.202.3@1" 0 0 0 0 "" 0 ""
+Bp4=_ "STD_CODE" "0x0800096C" 0 0 0 0 "" 0 ""
+Bp5=_ "STD_CODE" "{E:\贾楠临时文件夹\组合仪表用液晶屏\大液晶屏\图形调试\调试方案 跳线方案\LED_DRIVER_STM32F107\Project\Template\main.c}.500.1@1" 0 0 0 0 "" 0 ""
+Bp6=_ "STD_CODE" "{E:\贾楠临时文件夹\组合仪表用液晶屏\大液晶屏\图形调试\调试方案 跳线方案\LED_DRIVER_STM32F107\Project\Template\main.c}.499.1@1" 0 0 0 0 "" 0 ""
+Bp7=_ "STD_CODE" "{$PROJ_DIR$}.435.3@1" 0 0 0 0 "" 0 ""
+Bp8=_ "STD_CODE" "{C:\Documents and Settings\Administrator\桌面\stm32F107 232通信\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.146.3@1" 0 0 0 0 "" 0 ""
+Bp9=_ "STD_CODE" "{C:\Documents and Settings\Administrator\桌面\stm32f107 485通信收\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.182.3@1" 0 0 0 0 "" 0 ""
+Bp10=_ "STD_CODE" "{E:\朱孝松临时\激光通讯\datasheet\输入捕获 IAR\485 CAN recieve\LED_DRIVER_STM32F107\Project\Template\main.c}.303.3@1" 0 0 0 0 "" 0 ""
+Bp11=_ "STD_CODE" "{I:\Users\Me-Android\Desktop\角度距离一起编码 哈哈哈\（适应新硬件）编码\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.184.1@1" 0 0 0 0 "" 0 ""
+Bp12=_ "STD_CODE" "{$PROJ_DIR$}.131.5@1" 0 0 0 0 "" 0 ""
+Bp13=_ "STD_CODE" "{$PROJ_DIR$}.137.9@1" 0 0 0 0 "" 0 ""
+Bp14=_ "STD_CODE" "{F:\Users\Android\Desktop\Laer_data_2_Can\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.206.17@1" 0 0 0 0 "" 0 ""
+Bp15=_ "STD_CODE" "{F:\Users\Android\Desktop\Laer_data_2_Can\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.237.9@1" 0 0 0 0 "" 0 ""
+Bp16=_ "STD_CODE" "{F:\Users\Android\Desktop\Laer_data_2_Can\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.245.12@1" 0 0 0 0 "" 0 ""
+Bp17=_ "STD_CODE" "{F:\Users\Android\Desktop\Laer_data_2_Can\LED_DRIVER_STM32F107\Project\Template\main.c}.135.13@1" 0 0 0 0 "" 0 ""
+Bp18=_ "STD_CODE" "{F:\Users\Android\Desktop\LaerSmall_data_2_Can\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.356.9@1" 0 0 0 0 "" 0 ""
+Bp19=_ "STD_CODE" "{F:\Users\Android\Desktop\Wireless_data_Recevie\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.263.7@1" 0 0 0 0 "" 0 ""
+Bp20=_ "STD_CODE" "{F:\Users\Android\Desktop\Wireless_data_Recevie\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.262.2@1" 0 0 0 0 "" 0 ""
+Bp21=_ "STD_CODE" "{F:\Users\Android\Desktop\detector_transporter\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.266.17@1" 0 0 0 0 "" 0 ""
+Count=22
