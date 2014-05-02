@@ -186,53 +186,51 @@ void USART1_IRQHandler(void)
  { 
    
    //unsigned int i;
-    RxBuffer1[RxCounter1++]= USART_ReceiveData(USART1); 
-   
-//    TxMessage.ExtId=0x000000c0;
-//    TxMessage.RTR=CAN_RTR_DATA;
-//        TxMessage.IDE=CAN_ID_EXT;
-//        TxMessage.DLC=8;
-//        TxMessage.Data[0]=aa;
-//        TxMessage.Data[1]=0x00;
-//        TxMessage.Data[2]=0x00;
-//        TxMessage.Data[3]=0x00;
-//        TxMessage.Data[4]=0x00;
-//        TxMessage.Data[5]=0x00;
-//        TxMessage.Data[6]=0x00;
-//        TxMessage.Data[7]=0x00;
-//        CAN_Transmit(CAN1, &TxMessage);
-   
-   if(RxBuffer1[RxCounter1-2]==0x08&RxBuffer1[RxCounter1-1]==0xaa)//means distance measurement is valid
-   {
-      distance_valid_flag=TRUE;
-        send_data_flag=FALSE;
-     // RxBuffer1[RxCounter1] = USART_ReceiveData(USART1);
-   }
-   else
-   {
-     if(RxBuffer1[RxCounter1-2]==0x08&RxBuffer1[RxCounter1-1]==0xff)//means distance measurement is invalid
-     {
-      distance_valid_flag=FALSE;
-        send_data_flag=FALSE;
-     }
-     else
-     {
-       if(RxBuffer1[RxCounter1-3]==0x08&((RxBuffer1[RxCounter1-2]==0xff)|(RxBuffer1[RxCounter1-2]==0xaa)))
-       {
-          y_bias=RxBuffer1[RxCounter1-1];
-          send_data_flag=TRUE;
-       }
-     }
-   }
-    RxCounter1++;
-     if(RxCounter1==3) 
-      { 
-        rec_f=1;	
-        RxCounter1=0;
-	
+    RxBuffer1[RxCounter1]= USART_ReceiveData(USART1); 
+    y_bias= RxBuffer1[RxCounter1];
+      if(RxBuffer1[RxCounter1]==0xF1||RxBuffer1[RxCounter1]==0xF3||RxBuffer1[RxCounter1]==0xa0||RxBuffer1[RxCounter1]==0xa1||RxBuffer1[RxCounter1]==0xb0)
+      {
+        send_data_flag=TRUE;
       }
- 
+//    if(RxBuffer1[RxCounter1]==0xFF)
+//    {
+//     distance_valid_flag=FALSE;
+//     send_data_flag=TRUE;
+//    }
+//    if(RxBuffer1[RxCounter1]==0x01)
+//    {
+//     //distance_valid_flag=TRUE;
+//     ydir=0x01;//Y IS TOO HIGH
+//     //send_data_flag=TRUE;
+//    }
+//     if(RxBuffer1[RxCounter1]==0x02)
+//    {
+//     //distance_valid_flag=TRUE;
+//     ydir=0x02;//y is too low
+//     //send_data_flag=TRUE;
+//    }
+//     if(RxBuffer1[RxCounter1]==0x03)
+//    {
+//     //distance_valid_flag=TRUE;
+//     ydir=0x03;//y is too low
+//     //send_data_flag=TRUE;
+//    }
+//    if(RxBuffer1[RxCounter1]==0xAA)
+//    {
+//     distance_valid_flag=TRUE;
+//     send_data_flag=TRUE;
+//    }
+     
+    RxCounter1++;
+      if(RxCounter1>1)
+    {
+      RxCounter1=0;
+     
+    }
+
  }
+
+   
   //溢出-如果发生溢出需要先读 SR,再读 DR 寄存器则可清除不断入中断的问题[牛人说要这样]  
   if(USART_GetFlagStatus(USART1,USART_FLAG_ORE)==SET) 
   {   
@@ -241,7 +239,6 @@ void USART1_IRQHandler(void)
   }
 
 }
-
 
 void USART2_IRQHandler(void)
 {

@@ -60,6 +60,12 @@ uint8_t lastlightpos=0;
 uint8_t LocationSendFlag;
 uint8_t shouldturnflag=0;
 uint8_t ref,numofbyte,n,m,t,s,ct,cnt,k,a,code_count;
+
+int send_data_flag;
+uint8_t y_bias;
+int ydir=0;
+int distance_valid_flag;
+
 volatile TestStatus TransferStatus1 = FAILED, TransferStatus2 = FAILED;  
 /* Private function prototypes -----------------------------------------------*/
 void RCC_Configuration(void);
@@ -184,6 +190,40 @@ int main(void)
         }
         
         CAN_Transmit(CAN1, &TxMessage); //这里是将距离值的1000被传给DSP 通过CAN 比如距离是18.555 传给DSP 是18555
+      }
+    //////////////////////////////
+    /////////////////this part is from wireless recive
+    //////////////////once the flag data is set it means the wireless
+    ////////////port has recived a message from the moving target(a track or so) 
+    if(send_data_flag==TRUE)
+      {
+        send_data_flag=FALSE;
+        USART_ITConfig(USART1, USART_IT_RXNE, DISABLE);
+ 
+        TxMessage.ExtId=0x111215;
+        TxMessage.RTR=CAN_RTR_DATA;
+        TxMessage.IDE=CAN_ID_EXT;
+        TxMessage.DLC=8;
+        if(distance_valid_flag==TRUE)
+        {
+          TxMessage.Data[0]=0xaa;
+        }
+        else
+        {
+         TxMessage.Data[0]=0xff;
+        }
+        TxMessage.Data[1]=y_bias;
+        
+        TxMessage.Data[2]=0x00;
+        TxMessage.Data[3]=0x00;
+        TxMessage.Data[4]=0x00;
+        TxMessage.Data[5]=0x00;
+        TxMessage.Data[6]=0x00;
+        TxMessage.Data[7]=y_bias;
+       
+	CAN_Transmit(CAN1, &TxMessage);
+        USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+ 
       }
   }
 }
