@@ -34,23 +34,16 @@
 __IO uint16_t capture_number1=0,capture_number = 0;
 uint16_t up,down,i,j,tim3_count1,tim3_count2;
 volatile uint16_t aa;
-extern uint8_t databuffer[8];
-extern uint8_t sendbufferall[111];
-extern uint8_t sendbuffer[8];
-extern uint8_t sendbuffer0[31];
-extern uint8_t sendbuffer1[31];
-extern uint8_t sendbuffer2[31];
-extern uint8_t sendbuffer3[31];
-extern uint8_t sendbuffer4[31];
-extern uint8_t sendbuffer5[31];
-extern uint8_t sendbuffer6[31];
-extern uint8_t sendbuffer7[31];
+
 extern uint8_t ref,numofbyte,cnt,t;
 
 
 extern uint8_t rec_f;
 extern uint8_t RxCounter1;
+extern uint8_t RxCounter_wireless;
+
 extern uint8_t RxBuffer1[13];
+extern uint8_t RxBuffer_wireless[13];
 extern uint8_t TxBuffer1[6];
 
 extern float x0,y0;
@@ -186,9 +179,9 @@ void USART1_IRQHandler(void)
  { 
    
    //unsigned int i;
-    RxBuffer1[RxCounter1]= USART_ReceiveData(USART1); 
-    y_bias= RxBuffer1[RxCounter1];
-      if(RxBuffer1[RxCounter1]==0xF1||RxBuffer1[RxCounter1]==0xF3||RxBuffer1[RxCounter1]==0xa0||RxBuffer1[RxCounter1]==0xa1||RxBuffer1[RxCounter1]==0xb0)
+    RxBuffer_wireless[RxCounter_wireless]= USART_ReceiveData(USART1); 
+    y_bias= RxBuffer_wireless[RxCounter_wireless];
+      if(RxBuffer_wireless[RxCounter_wireless]==0xF1||RxBuffer_wireless[RxCounter_wireless]==0xF3||RxBuffer_wireless[RxCounter_wireless]==0xa0||RxBuffer_wireless[RxCounter_wireless]==0xa1||RxBuffer_wireless[RxCounter_wireless]==0xb0)
       {
         send_data_flag=TRUE;
       }
@@ -221,10 +214,10 @@ void USART1_IRQHandler(void)
 //     send_data_flag=TRUE;
 //    }
      
-    RxCounter1++;
-      if(RxCounter1>1)
+    RxCounter_wireless++;
+      if(RxCounter_wireless>1)
     {
-      RxCounter1=0;
+      RxCounter_wireless=0;
      
     }
 

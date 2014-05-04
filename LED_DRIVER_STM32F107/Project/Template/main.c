@@ -42,13 +42,7 @@ typedef enum {FAILED = 0, PASSED = !FAILED} TestStatus;
 /* Private variables ---------------------------------------------------------*/
 uint8_t databuffer[8]={0};
 uint8_t sendbufferall[111]={0};
-uint8_t sendbuffer[8]={0};
-uint8_t sendbuffer0[16]={0};
-uint8_t sendbuffer1[16]={0};
-uint8_t sendbuffer2[16]={0};
-uint8_t sendbuffer3[16]={0};
-uint8_t sendbuffer4[16]={0};
-uint8_t sendbuffer5[16]={0};
+
 //uint8_t sendbuffer7[31]={0};
 volatile uint16_t ADC_ConvertedValue[4];
 volatile float U1,U2,U3,U4;
@@ -87,9 +81,10 @@ USART_InitTypeDef USART_InitStructure;
 uint8_t TxBuffer1[6] = {0};
 uint8_t TxBuffer2[] = "USART Half Duplex: USARTz -> USARTy using HalfDuplex mode";
 uint8_t RxBuffer1[13]={0};
-uint8_t RxBuffer2[TxBufferSize1];
+uint8_t RxBuffer_wireless[13]={0};
+
 uint8_t TxCounter1 = 0, RxCounter1 = 0,data=0,rec_f=0,n,m;
-uint8_t TxCounter2 = 0, RxCounter2 = 0;
+uint8_t RxCounter_wireless=0;
 
 extern CanTxMsg TxMessage;
 uint8_t y_bias;
@@ -192,7 +187,7 @@ int main(void)
         CAN_Transmit(CAN1, &TxMessage); //这里是将距离值的1000被传给DSP 通过CAN 比如距离是18.555 传给DSP 是18555
       }
     //////////////////////////////
-    /////////////////this part is from wireless recive
+    /////////////////this part is from wireless receive
     //////////////////once the flag data is set it means the wireless
     ////////////port has recived a message from the moving target(a track or so) 
     if(send_data_flag==TRUE)

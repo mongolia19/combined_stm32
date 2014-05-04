@@ -12,7 +12,7 @@
           
           
           
-        <Column0>63</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>302</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       <PreferedWindows><Position>4</Position><ScreenPosX>786</ScreenPosX><ScreenPosY>192</ScreenPosY><Windows/></PreferedWindows></Workspace>
       <Build>
         
@@ -31,14 +31,14 @@
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>F:\Users\Android\Desktop\detector_transporter\LED_DRIVER_STM32F107\Project\Template\main.c</Filename><XPos>0</XPos><YPos>132</YPos><SelStart>2380</SelStart><SelEnd>2380</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>F:\Users\Android\Desktop\detector_transporter\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>219</YPos><SelStart>6282</SelStart><SelEnd>6282</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>F:\Users\Android\Desktop\detector_transporter\LED_DRIVER_STM32F107\Project\Template\main.c</Filename><XPos>0</XPos><YPos>210</YPos><SelStart>1883</SelStart><SelEnd>1883</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>F:\Users\Android\Desktop\detector_transporter\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>166</YPos><SelStart>5913</SelStart><SelEnd>5913</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-01482dd0><key>iaridepm.enu1</key></Toolbar-01482dd0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>663</Bottom><Right>137</Right><x>-2</x><y>-2</y><xscreen>846</xscreen><yscreen>141</yscreen><sizeHorzCX>1026699</sizeHorzCX><sizeHorzCY>148109</sizeHorzCY><sizeVertCX>168689</sizeVertCX><sizeVertCY>698529</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>244</Bottom><Right>826</Right><x>-2</x><y>-2</y><xscreen>828</xscreen><yscreen>246</yscreen><sizeHorzCX>1004854</sizeHorzCX><sizeHorzCY>258403</sizeHorzCY><sizeVertCX>1026699</sizeVertCX><sizeVertCY>148109</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-012a2dd0><key>iaridepm.enu1</key></Toolbar-012a2dd0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>752</Bottom><Right>376</Right><x>-2</x><y>-2</y><xscreen>1033</xscreen><yscreen>99</yscreen><sizeHorzCX>614881</sizeHorzCX><sizeHorzCY>102273</sizeHorzCY><sizeVertCX>225000</sizeVertCX><sizeVertCY>778926</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>171</Bottom><Right>1682</Right><x>-2</x><y>-2</y><xscreen>1684</xscreen><yscreen>173</yscreen><sizeHorzCX>1002381</sizeHorzCX><sizeHorzCY>178719</sizeHorzCY><sizeVertCX>614881</sizeVertCX><sizeVertCY>102273</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 
