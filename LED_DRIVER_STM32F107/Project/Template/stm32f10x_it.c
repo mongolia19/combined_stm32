@@ -86,6 +86,7 @@ void HardFault_Handler(void)
   /* Go to infinite loop when Hard Fault exception occurs */
   while (1)
   {
+    GPIO_SetBits(GPIOC, GPIO_Pin_7);	
   }
 }
 
@@ -246,6 +247,7 @@ if(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) != RESET)
 void CAN1_RX0_IRQHandler(void)
 
 {      
+   // GPIO_SetBits(GPIOC, GPIO_Pin_6);	
             CanRxMsg RxMessage;	 
 	//u8 dw=0,wd=0;
 	//TIM_Configuration();
@@ -253,19 +255,18 @@ void CAN1_RX0_IRQHandler(void)
       
        if(RxMessage.ExtId == 0x01)// //打开激光测距传感器 
 	{
-                USART_SendData(UART4,0xdd);
+                //USART_SendData(UART4,0xdd);
                 USART_SendData(USART3,0xdd);
-                TIM_Cmd(TIM4, ENABLE);
-                TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
+               
 	}
       else if(RxMessage.ExtId == 0x02)   //关闭激光测距传感器 
 	{
 	
-	    USART_SendData(UART4,0xaa);
+	    //USART_SendData(UART4,0xaa);
             USART_SendData(USART3,0xaa);
-            TIM_Cmd(TIM4, DISABLE);
+            
          
-	Delay(0xff);
+	//Delay(0xff);
 	}
       else
       {
@@ -275,10 +276,12 @@ void CAN1_RX0_IRQHandler(void)
 
 void USART3_IRQHandler (void)      //用串口采初始距离数据
 {
+    
    if(USART_GetFlagStatus(USART3, USART_FLAG_RXNE) != RESET)	   //判断读寄存器是否非空
   
  { 
-   
+  
+   GPIO_SetBits(GPIOC, GPIO_Pin_6);	
   // unsigned int i;
    
     RxBuffer1[RxCounter1] = USART_ReceiveData(USART3);
@@ -318,8 +321,19 @@ void USART3_IRQHandler (void)      //用串口采初始距离数据
             }
           }
       }
+    if(RxCounter1>=6)
+    {
+    RxCounter1=0;
+    }
  
  }
+ //溢出-如果发生溢出需要先读 SR,再读 DR 寄存器则可清除不断入中断的问题[牛人说要这样]  
+  if(USART_GetFlagStatus(USART3,USART_FLAG_ORE)==SET) 
+  {   
+    USART_ClearFlag(USART3,USART_FLAG_ORE); //读 SR 其实就是清除标志 
+    USART_ReceiveData(USART3); //读 DR  
+  }
+ 
 
   
 // if(USART_GetFlagStatus(USART3, USART_FLAG_RXNE) != RESET)	   //判断读寄存器是否非空

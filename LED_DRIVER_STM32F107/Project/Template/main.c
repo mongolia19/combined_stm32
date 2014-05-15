@@ -78,12 +78,12 @@ u32 GetTIM_Period(u8 n);
 TestStatus Buffercmp(uint8_t* pBuffer1, uint8_t* pBuffer2, uint16_t BufferLength);
 
 USART_InitTypeDef USART_InitStructure;
-uint8_t TxBuffer1[6] = {0};
+uint8_t TxBuffer1[7] = {0};
 uint8_t TxBuffer2[] = "USART Half Duplex: USARTz -> USARTy using HalfDuplex mode";
 uint8_t RxBuffer1[13]={0};
 uint8_t RxBuffer_wireless[13]={0};
 
-uint8_t TxCounter1 = 0, RxCounter1 = 0,data=0,rec_f=0,n,m;
+uint8_t TxCounter1 = 0, RxCounter1 = 0,data=0,rec_f=0,n=0,m=0;
 uint8_t RxCounter_wireless=0;
 
 extern CanTxMsg TxMessage;
@@ -116,7 +116,7 @@ int main(void)
   GPIO_Configuration();
   CAN_Configuration();	
   
-  TIM4_Configuration();
+ // TIM4_Configuration();
   
   CAN_ITConfig(CAN1, CAN_IT_FMP0, ENABLE);
   //CAN_ITConfig(CAN2, CAN_IT_FMP0, ENABLE);
@@ -133,12 +133,17 @@ int main(void)
   USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
   NVIC_Configuration();
   //USART_ITConfig(USART2, USART_IT_RXNE, DISABLE);
-  
+  GPIO_ResetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7);
   while (1)
   { 
-      
+    GPIO_ResetBits(GPIOC, GPIO_Pin_6);
+    if(n>5||m>7){
+    n=0;
+    m=0;
+    }
     if(rec_f==1)
       {
+        USART_ITConfig(USART3, USART_IT_RXNE, DISABLE);
 	rec_f=0;
        /* TxMessage.ExtId=0x1210;
         TxMessage.RTR=CAN_RTR_DATA;
@@ -157,7 +162,7 @@ int main(void)
         TxMessage.IDE=CAN_ID_EXT;
         TxMessage.DLC=8;
         
-        for(n=0,m=0;n<6;n++,m++)
+        for(n=0,m=0;n<5;n++,m++)
         {
           switch( TxBuffer1[n])
           {
@@ -183,8 +188,12 @@ int main(void)
 	      break;
           }
         }
-        
+        n=0;m=0;
+        Delay(200);
+    
         CAN_Transmit(CAN1, &TxMessage); //这里是将距离值的1000被传给DSP 通过CAN 比如距离是18.555 传给DSP 是18555
+        Delay(200);
+      USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
       }
     //////////////////////////////
     /////////////////this part is from wireless receive
@@ -305,11 +314,12 @@ void GPIO_Configuration(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;   
   GPIO_Init(GPIOB, &GPIO_InitStructure);	
   /* Configure  TIM4 INPUT PIN   */
- /* GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;	
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;;	
+  ///FOR TEST
+ GPIO_InitStructure.GPIO_Pin = GPIO_Pin_7|GPIO_Pin_6;	
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GPIOB, &GPIO_InitStructure);
-*/
+  GPIO_Init(GPIOC, &GPIO_InitStructure);
+
 }
 
 void USART_Config(USART_TypeDef* USARTx){
@@ -345,7 +355,7 @@ void NVIC_Configuration(void)
   
      NVIC_InitStructure.NVIC_IRQChannel = CAN1_RX0_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;	
- NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+ NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
   
@@ -353,7 +363,7 @@ void NVIC_Configuration(void)
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;	
  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-  NVIC_Init(&NVIC_InitStructure);*/
+  NVIC_Init(&NVIC_InitStructure);
   
      NVIC_InitStructure.NVIC_IRQChannel = TIM4_IRQn ;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;	
@@ -372,7 +382,7 @@ void NVIC_Configuration(void)
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 4;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
-  
+  */
 }
 u32 GetTIM_Period(u8 n)////input 10 times bigger
 {
