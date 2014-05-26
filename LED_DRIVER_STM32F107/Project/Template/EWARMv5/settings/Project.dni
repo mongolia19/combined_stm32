@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=974453545
+Checksum=2027743503
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 0
@@ -19,22 +19,6 @@ UseTrigger=1
 TriggerName=main
 LimitSize=0
 ByteLimit=50
-[DriverProfiling]
-Enabled=0
-Source=2
-Graph=0
-[Aliases]
-Count=0
-SuppressDialog=0
-[Log file]
-LoggingEnabled=_ 0
-LogFile=_ ""
-Category=_ 0
-[TermIOLog]
-LoggingEnabled=_ 0
-LogFile=_ ""
-[Disassemble mode]
-mode=1
 [Breakpoints]
 Bp0=_ "STD_CODE" "{$PROJ_DIR$}.202.3@1" 0 0 0 0 "" 0 ""
 Bp1=_ "STD_CODE" "{$PROJ_DIR$}.221.5@1" 0 0 0 0 "" 0 ""
@@ -57,5 +41,92 @@ Bp17=_ "STD_CODE" "{F:\Users\Android\Desktop\Laer_data_2_Can\LED_DRIVER_STM32F10
 Bp18=_ "STD_CODE" "{F:\Users\Android\Desktop\LaerSmall_data_2_Can\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.356.9@1" 0 0 0 0 "" 0 ""
 Bp19=_ "STD_CODE" "{F:\Users\Android\Desktop\Wireless_data_Recevie\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.263.7@1" 0 0 0 0 "" 0 ""
 Bp20=_ "STD_CODE" "{F:\Users\Android\Desktop\Wireless_data_Recevie\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.262.2@1" 0 0 0 0 "" 0 ""
-Bp21=_ "STD_CODE" "{F:\Users\Android\Desktop\detector_transporter\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.263.17@1" 0 0 0 0 "" 0 ""
-Count=22
+Bp21=_ "STD_CODE" "{C:\Users\lab\Documents\GitHub\combined_stm32\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.89.5@1" 1 0 0 0 "" 0 ""
+Bp22=_ "STD_CODE" "{C:\Users\lab\Documents\GitHub\combined_stm32\LED_DRIVER_STM32F107\Project\Template\main.c}.141.5@1" 1 0 0 0 "" 0 ""
+Bp23=_ "STD_CODE" "{C:\Users\lab\Documents\GitHub\combined_stm32\LED_DRIVER_STM32F107\Project\Template\stm32f10x_it.c}.462.4@1" 1 0 0 0 "" 0 ""
+Count=24
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[SWOTraceHWSettings]
+OverrideDefaultClocks=0
+CpuClock=72000000
+ClockAutoDetect=0
+ClockWanted=2000000
+JtagSpeed=2000000
+Prescaler=36
+TimeStampPrescIndex=0
+TimeStampPrescData=0
+PcSampCYCTAP=1
+PcSampPOSTCNT=15
+PcSampIndex=0
+DataLogMode=0
+ITMportsEnable=0
+ITMportsTermIO=0
+ITMportsLogFile=0
+ITMlogFile=$PROJ_DIR$\ITM.log
+[watch_formats]
+Fmt0={W}0:RxBuffer1[RxCounter1]	4	0
+Fmt1={W}0:rec_f	4	0
+[DataLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Trace2]
+Enabled=0
+[SWOTraceWindow]
+PcSampling=0
+InterruptLogs=0
+ForcedTimeStamps=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=3
+Graph=0
+Symbiont=0
+Exclusions=
+[Disassemble mode]
+mode=1
+[Breakpoints2]
+Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\stm32f10x_it.c}.89.5" 0 0 1 "" 0 "" 0
+Bp1=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\stm32f10x_it.c}.250.5" 0 0 1 "" 0 "" 0
+Count=2
+[Aliases]
+Count=0
+SuppressDialog=0

@@ -247,7 +247,7 @@ if(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) != RESET)
 void CAN1_RX0_IRQHandler(void)
 
 {      
-   // GPIO_SetBits(GPIOC, GPIO_Pin_6);	
+    GPIO_SetBits(GPIOC, GPIO_Pin_6);	
             CanRxMsg RxMessage;	 
 	//u8 dw=0,wd=0;
 	//TIM_Configuration();
@@ -257,14 +257,18 @@ void CAN1_RX0_IRQHandler(void)
 	{
                 //USART_SendData(UART4,0xdd);
                 USART_SendData(USART3,0xdd);
-               
+              while(USART_GetFlagStatus(USART3,USART_FLAG_TXE)==RESET)
+              {
+              }
 	}
       else if(RxMessage.ExtId == 0x02)   //关闭激光测距传感器 
 	{
 	
 	    //USART_SendData(UART4,0xaa);
             USART_SendData(USART3,0xaa);
-            
+             while(USART_GetFlagStatus(USART3,USART_FLAG_TXE)==RESET)
+              {
+              }
          
 	//Delay(0xff);
 	}

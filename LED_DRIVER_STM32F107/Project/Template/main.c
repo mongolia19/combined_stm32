@@ -109,7 +109,7 @@ USART_ClockInitTypeDef USART_ClockInitStruct;
   * @param  None
   * @retval None
   */
-int main(void)
+int main(void)////in use
 {
 
   RCC_Configuration();
@@ -134,6 +134,12 @@ int main(void)
   NVIC_Configuration();
   //USART_ITConfig(USART2, USART_IT_RXNE, DISABLE);
   GPIO_ResetBits(GPIOC, GPIO_Pin_6|GPIO_Pin_7);
+  Delay(10000000);
+   //Open laser detector   USART_SendData(UART4,0xdd);
+  USART_SendData(USART3,0xdd);
+  while(USART_GetFlagStatus(USART3,USART_FLAG_TXE)==RESET)
+  {
+  }
   while (1)
   { 
     GPIO_ResetBits(GPIOC, GPIO_Pin_6);
@@ -189,7 +195,7 @@ int main(void)
           }
         }
         n=0;m=0;
-        Delay(200);
+        
     
         CAN_Transmit(CAN1, &TxMessage); //这里是将距离值的1000被传给DSP 通过CAN 比如距离是18.555 传给DSP 是18555
         Delay(200);
@@ -229,6 +235,7 @@ int main(void)
         USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
  
       }
+    Delay(10);
   }
 }
 /**
@@ -245,7 +252,7 @@ void RCC_Configuration(void)
 
   /* Enable GPIO clock */
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOB|RCC_APB2Periph_GPIOC|RCC_APB2Periph_AFIO, ENABLE);
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3|RCC_APB1Periph_TIM2|RCC_APB1Periph_TIM4|RCC_APB1Periph_TIM3|RCC_APB1Periph_USART2|RCC_APB1Periph_CAN1|RCC_APB1Periph_CAN2,ENABLE);
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3|RCC_APB1Periph_USART2|RCC_APB1Periph_CAN1,ENABLE);
   
 }
 
@@ -353,13 +360,13 @@ void NVIC_Configuration(void)
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
   
-     NVIC_InitStructure.NVIC_IRQChannel = CAN1_RX0_IRQn;
+      NVIC_InitStructure.NVIC_IRQChannel = CAN1_RX0_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;	
  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
   
-   /*NVIC_InitStructure.NVIC_IRQChannel = CAN2_RX0_IRQn;
+ /* NVIC_InitStructure.NVIC_IRQChannel = CAN2_RX0_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;	
  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
