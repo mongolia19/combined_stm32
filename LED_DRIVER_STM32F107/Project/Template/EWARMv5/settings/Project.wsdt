@@ -12,7 +12,7 @@
           
           
           
-        <Column0>122</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+        <Column0>248</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
       <PreferedWindows><Position>4</Position><ScreenPosX>786</ScreenPosX><ScreenPosY>192</ScreenPosY><Windows/></PreferedWindows></Workspace>
       <Build>
         
@@ -31,14 +31,14 @@
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>101</YPos><SelStart>3863</SelStart><SelEnd>3863</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>278</YPos><SelStart>7387</SelStart><SelEnd>7387</SelEnd></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>175</YPos><SelStart>5273</SelStart><SelEnd>5273</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>212</YPos><SelStart>4711</SelStart><SelEnd>4711</SelEnd></Tab><ActiveTab>1</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-01c06660><key>iaridepm.enu1</key></Toolbar-01c06660></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>360</Bottom><Right>196</Right><x>-2</x><y>-2</y><xscreen>287</xscreen><yscreen>49</yscreen><sizeHorzCX>304025</sizeHorzCX><sizeHorzCY>100000</sizeHorzCY><sizeVertCX>209746</sizeVertCX><sizeVertCY>738776</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>85</Bottom><Right>946</Right><x>-2</x><y>-2</y><xscreen>948</xscreen><yscreen>87</yscreen><sizeHorzCX>1004237</sizeHorzCX><sizeHorzCY>177551</sizeHorzCY><sizeVertCX>304025</sizeVertCX><sizeVertCY>100000</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-01cf1f48><key>iaridepm.enu1</key></Toolbar-01cf1f48></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>808</Bottom><Right>322</Right><x>-2</x><y>-2</y><xscreen>150</xscreen><yscreen>66</yscreen><sizeHorzCX>89286</sizeHorzCX><sizeHorzCY>68182</sizeHorzCY><sizeVertCX>192857</sizeVertCX><sizeVertCY>836777</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>115</Bottom><Right>1682</Right><x>-2</x><y>-2</y><xscreen>1684</xscreen><yscreen>117</yscreen><sizeHorzCX>1002381</sizeHorzCX><sizeHorzCY>120868</sizeHorzCY><sizeVertCX>89286</sizeVertCX><sizeVertCY>68182</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

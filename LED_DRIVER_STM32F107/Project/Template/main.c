@@ -142,6 +142,7 @@ int main(void)////in use
   }
   while (1)
   { 
+    
     GPIO_ResetBits(GPIOC, GPIO_Pin_6);
     if(n>5||m>7){
     n=0;

@@ -182,10 +182,10 @@ void USART1_IRQHandler(void)
    //unsigned int i;
     RxBuffer_wireless[RxCounter_wireless]= USART_ReceiveData(USART1); 
     y_bias= RxBuffer_wireless[RxCounter_wireless];
-      if(RxBuffer_wireless[RxCounter_wireless]==0xF1||RxBuffer_wireless[RxCounter_wireless]==0xF3||RxBuffer_wireless[RxCounter_wireless]==0xa0||RxBuffer_wireless[RxCounter_wireless]==0xa1||RxBuffer_wireless[RxCounter_wireless]==0xb0)
-      {
-        send_data_flag=TRUE;
-      }
+    send_data_flag=TRUE;
+      //if(RxBuffer_wireless[RxCounter_wireless]==0xF1||RxBuffer_wireless[RxCounter_wireless]==0xF3||RxBuffer_wireless[RxCounter_wireless]==0xa0||RxBuffer_wireless[RxCounter_wireless]==0xa1||RxBuffer_wireless[RxCounter_wireless]==0xb0)
+      //{
+      //}
 //    if(RxBuffer1[RxCounter1]==0xFF)
 //    {
 //     distance_valid_flag=FALSE;

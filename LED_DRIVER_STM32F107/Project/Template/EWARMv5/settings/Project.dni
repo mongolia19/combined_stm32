@@ -1,5 +1,5 @@
 [DebugChecksum]
-Checksum=2027743503
+Checksum=228001254
 [DisAssemblyWindow]
 NumStates=_ 1
 State 1=_ 0
@@ -124,9 +124,9 @@ Exclusions=
 [Disassemble mode]
 mode=1
 [Breakpoints2]
-Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\stm32f10x_it.c}.89.5" 0 0 1 "" 0 "" 0
-Bp1=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\stm32f10x_it.c}.250.5" 0 0 1 "" 0 "" 0
-Count=2
+Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\stm32f10x_it.c}.256.8" 0 0 1 "" 0 "" 0
+Count=1
 [Aliases]
-Count=0
+A0=_ "C:\Users\lab\Documents\GitHub\combined_stm32\LED_DRIVER_STM32F107\Project\Template\main.c" "F:\Users\Android\Desktop\combined_stm32\LED_DRIVER_STM32F107\Project\Template\main.c"
+Count=1
 SuppressDialog=0

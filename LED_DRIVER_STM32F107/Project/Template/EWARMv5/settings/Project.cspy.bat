@@ -10,6 +10,6 @@
 @REM 
 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 6.0\common\bin\cspybat" "C:\Program Files\IAR Systems\Embedded Workbench 6.0\arm\bin\armproc.dll" "C:\Program Files\IAR Systems\Embedded Workbench 6.0\arm\bin\armstlink.dll"  %1 --plugin "C:\Program Files\IAR Systems\Embedded Workbench 6.0\arm\bin\armbat.dll" --flash_loader "C:\Program Files\IAR Systems\Embedded Workbench 6.0\arm\config\flashloader\ST\FlashSTM32F105xC.board" --backend -B "--endian=little" "--cpu=Cortex-M3" "--fpu=None" "-p" "C:\Program Files\IAR Systems\Embedded Workbench 6.0\arm\CONFIG\debugger\ST\iostm32f107xx.ddf" "--semihosting" "--device=STM32F107xC" "--stlink_interface=SWD" "--stlink_reset_strategy=0,0" "--drv_swo_clock_setup=72000000,0,2000000" 
+"F:\Program Files\IAR Systems\Embedded Workbench 6.0_2\common\bin\cspybat" "F:\Program Files\IAR Systems\Embedded Workbench 6.0_2\arm\bin\armproc.dll" "F:\Program Files\IAR Systems\Embedded Workbench 6.0_2\arm\bin\armstlink.dll"  %1 --plugin "F:\Program Files\IAR Systems\Embedded Workbench 6.0_2\arm\bin\armbat.dll" --flash_loader "F:\Program Files\IAR Systems\Embedded Workbench 6.0_2\arm\config\flashloader\ST\FlashSTM32F105xC.board" --backend -B "--endian=little" "--cpu=Cortex-M3" "--fpu=None" "-p" "F:\Program Files\IAR Systems\Embedded Workbench 6.0_2\arm\CONFIG\debugger\ST\iostm32f107xx.ddf" "--semihosting" "--device=STM32F107xC" "--stlink_interface=SWD" "--stlink_reset_strategy=0,0" "--drv_swo_clock_setup=72000000,0,2000000" 
 
 
