@@ -57,6 +57,7 @@ uint8_t ref,numofbyte,n,m,t,s,ct,cnt,k,a,code_count;
 
 int send_data_flag;
 uint8_t y_bias;
+uint8_t x_bias;
 int ydir=0;
 int distance_valid_flag;
 
@@ -87,7 +88,7 @@ uint8_t TxCounter1 = 0, RxCounter1 = 0,data=0,rec_f=0,n=0,m=0;
 uint8_t RxCounter_wireless=0;
 
 extern CanTxMsg TxMessage;
-uint8_t y_bias;
+
 int distance_valid_flag;
 int send_data_flag;
 void ADC1_Init(void);
@@ -230,7 +231,7 @@ int main(void)////in use
         TxMessage.Data[4]=0x00;
         TxMessage.Data[5]=0x00;
         TxMessage.Data[6]=0x00;
-        TxMessage.Data[7]=y_bias;
+        TxMessage.Data[7]=x_bias;
        
 	CAN_Transmit(CAN1, &TxMessage);
         USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);

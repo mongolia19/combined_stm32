@@ -124,7 +124,7 @@ Exclusions=
 [Disassemble mode]
 mode=1
 [Breakpoints2]
-Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\stm32f10x_it.c}.256.8" 0 0 1 "" 0 "" 0
+Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\stm32f10x_it.c}.280.8" 0 0 1 "" 0 "" 0
 Count=1
 [Aliases]
 A0=_ "C:\Users\lab\Documents\GitHub\combined_stm32\LED_DRIVER_STM32F107\Project\Template\main.c" "F:\Users\Android\Desktop\combined_stm32\LED_DRIVER_STM32F107\Project\Template\main.c"

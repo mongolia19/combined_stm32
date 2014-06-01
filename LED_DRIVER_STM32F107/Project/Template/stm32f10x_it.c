@@ -54,6 +54,8 @@ extern uint8_t shouldturnflag;
 extern int hitpos;
 
 extern uint8_t y_bias;
+extern uint8_t x_bias;
+
 extern int distance_valid_flag;
 extern int send_data_flag;
 /* Private function prototypes -----------------------------------------------*/
@@ -181,8 +183,30 @@ void USART1_IRQHandler(void)
    
    //unsigned int i;
     RxBuffer_wireless[RxCounter_wireless]= USART_ReceiveData(USART1); 
-    y_bias= RxBuffer_wireless[RxCounter_wireless];
-    send_data_flag=TRUE;
+    if(RxCounter_wireless==0&&RxBuffer_wireless[RxCounter_wireless]==0xde)
+    {
+        RxCounter_wireless++;
+    }
+    else if(RxCounter_wireless==0&&RxBuffer_wireless[RxCounter_wireless]!=0xde)
+    {
+      RxCounter_wireless=0;
+    }
+    else if(RxCounter_wireless!=0)
+    {
+      if(RxCounter_wireless==2)
+      {
+        y_bias = RxBuffer_wireless[1];
+        x_bias = RxBuffer_wireless[2];
+        send_data_flag=TRUE;
+        RxCounter_wireless=0;
+      }
+      else
+      {
+        RxCounter_wireless++;
+      }
+    }
+    
+
       //if(RxBuffer_wireless[RxCounter_wireless]==0xF1||RxBuffer_wireless[RxCounter_wireless]==0xF3||RxBuffer_wireless[RxCounter_wireless]==0xa0||RxBuffer_wireless[RxCounter_wireless]==0xa1||RxBuffer_wireless[RxCounter_wireless]==0xb0)
       //{
       //}
@@ -215,8 +239,8 @@ void USART1_IRQHandler(void)
 //     send_data_flag=TRUE;
 //    }
      
-    RxCounter_wireless++;
-      if(RxCounter_wireless>1)
+  
+      if(RxCounter_wireless>=3)
     {
       RxCounter_wireless=0;
      
