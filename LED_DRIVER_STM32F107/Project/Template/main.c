@@ -143,7 +143,11 @@ int main(void)////in use
   }
   while (1)
   { 
-    
+//    USART_SendData(USART1,0xda);////just for test
+//    while(USART1->SR&0X40==0)
+//    {
+//    
+//    }
     GPIO_ResetBits(GPIOC, GPIO_Pin_6);
     if(n>5||m>7){
     n=0;
@@ -197,7 +201,7 @@ int main(void)////in use
           }
         }
         n=0;m=0;
-        
+        TxMessage.Data[5]=0x01;
     
         CAN_Transmit(CAN1, &TxMessage); //这里是将距离值的1000被传给DSP 通过CAN 比如距离是18.555 传给DSP 是18555
         Delay(200);
