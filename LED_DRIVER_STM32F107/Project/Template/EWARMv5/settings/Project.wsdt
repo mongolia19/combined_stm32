@@ -31,14 +31,14 @@
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>184</YPos><SelStart>4799</SelStart><SelEnd>4799</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>78</YPos><SelStart>5375</SelStart><SelEnd>5375</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>178</YPos><SelStart>6445</SelStart><SelEnd>6445</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>78</YPos><SelStart>5375</SelStart><SelEnd>5375</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-01c11fe0><key>iaridepm.enu1</key></Toolbar-01c11fe0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>808</Bottom><Right>322</Right><x>-2</x><y>-2</y><xscreen>150</xscreen><yscreen>66</yscreen><sizeHorzCX>89286</sizeHorzCX><sizeHorzCY>68182</sizeHorzCY><sizeVertCX>192857</sizeVertCX><sizeVertCY>836777</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>115</Bottom><Right>1682</Right><x>-2</x><y>-2</y><xscreen>1684</xscreen><yscreen>117</yscreen><sizeHorzCX>1002381</sizeHorzCX><sizeHorzCY>120868</sizeHorzCY><sizeVertCX>89286</sizeVertCX><sizeVertCY>68182</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-00e51fe0><key>iaridepm.enu1</key></Toolbar-00e51fe0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>808</Bottom><Right>322</Right><x>-2</x><y>-2</y><xscreen>150</xscreen><yscreen>66</yscreen><sizeHorzCX>89286</sizeHorzCX><sizeHorzCY>68182</sizeHorzCY><sizeVertCX>192857</sizeVertCX><sizeVertCY>836777</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>115</Bottom><Right>1682</Right><x>-2</x><y>-2</y><xscreen>1684</xscreen><yscreen>117</yscreen><sizeHorzCX>1002381</sizeHorzCX><sizeHorzCY>120868</sizeHorzCY><sizeVertCX>89286</sizeVertCX><sizeVertCY>68182</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

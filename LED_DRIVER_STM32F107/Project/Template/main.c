@@ -201,7 +201,7 @@ int main(void)////in use
           }
         }
         n=0;m=0;
-        TxMessage.Data[5]=0x01;
+        TxMessage.Data[5]=0x00;//index of Base BigRace
     
         CAN_Transmit(CAN1, &TxMessage); //这里是将距离值的1000被传给DSP 通过CAN 比如距离是18.555 传给DSP 是18555
         Delay(200);
