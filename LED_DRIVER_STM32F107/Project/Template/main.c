@@ -230,7 +230,7 @@ int main(void)////in use
         }
         TxMessage.Data[1]=y_bias;
         
-        TxMessage.Data[2]=0x00;
+        TxMessage.Data[2]=0x00;////index of base--0
         TxMessage.Data[3]=0x00;
         TxMessage.Data[4]=0x00;
         TxMessage.Data[5]=0x00;
