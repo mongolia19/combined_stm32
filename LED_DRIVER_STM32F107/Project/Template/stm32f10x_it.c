@@ -287,13 +287,14 @@ void CAN1_RX0_IRQHandler(void)
 	}
       else if(RxMessage.ExtId == 0x02)   //关闭激光测距传感器 
 	{
-	
+	  if(RxMessage.Data[0]==0x01)
+          {
 	    //USART_SendData(UART4,0xaa);
             USART_SendData(USART3,0xaa);
              while(USART_GetFlagStatus(USART3,USART_FLAG_TXE)==RESET)
               {
               }
-         
+          }
 	//Delay(0xff);
 	}
       else
